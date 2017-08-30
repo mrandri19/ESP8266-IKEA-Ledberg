@@ -9,6 +9,7 @@ include_directories(/home/andrea/.mos/modules-${MOS_VERSION}/mongoose-os-${MOS_V
         /home/andrea/.mos/libs-${MOS_VERSION}/rpc-common-${MOS_VERSION}/src
         /home/andrea/.mos/libs-${MOS_VERSION}/blynk-${MOS_VERSION}/src
         /home/andrea/.mos/libs-${MOS_VERSION}/wifi-${MOS_VERSION}/src
+        /home/andrea/.mos/libs-${MOS_VERSION}/pwm-${MOS_VERSION}/src
         /home/andrea/.mos/libs-${MOS_VERSION}/rpc-common-${MOS_VERSION}/src/mg_rpc)
 
 set(CMAKE_CXX_STANDARD 11)
