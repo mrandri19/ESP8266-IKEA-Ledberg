@@ -1,0 +1,8 @@
+{
+  "files.associations": {
+    "mgos_rpc.h": "c",
+    "mgos_pwm.h": "c",
+    "mgos.h": "c",
+    "mgos_ro_vars.h": "c"
+  }
+}

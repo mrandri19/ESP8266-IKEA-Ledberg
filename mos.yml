@@ -24,8 +24,8 @@ filesystem:
 # Uncomment and modify according to your needs:
 
 config_schema:
-  - ["wifi.sta.ssid", "mia rete"]
-  - ["wifi.sta.pass", "AnatocismoFurtoLegalizzatoComeAbigeato7591"]
+  - ["wifi.sta.ssid", "Wadsl-miaa"]
+  - ["wifi.sta.pass", "KernelCacheCompressionIsBoringButFun"]
   - ["wifi.sta.enable", true]
 
 # List of libraries used by this app, in order of initialisation

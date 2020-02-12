@@ -1,36 +1,13 @@
-const esp_ip = "192.168.1.112"
-const ws = new WebSocket(`ws://${esp_ip}/rpc/`)
-console.log("creating ws")
-
-let occupied = true
-
-ws.onclose = evt => (occupied = true)
-ws.onopen = evt => (occupied = false)
-
-ws.onmessage = evt => {
-  let data = JSON.parse(evt.data)
-  if ("error" in data) {
-    console.error("Error:", data.error.code, data.error.message)
-  }
-  if ("result" in data) {
-    occupied = false
-  }
-}
-
-function change_color(r, g, b) {
-  if (!occupied) {
-    occupied = true
-    const rpc_frame = {
-      method: "LED.ChangeValue",
-      args: {
-        r: r,
-        g: g,
-        b: b
-      }
-    }
-
-    ws.send(JSON.stringify(rpc_frame))
-  }
+async function change_color(r, g, b) {
+  const res = await fetch("/rpc/LED.ChangeValue", {
+    method: "POST",
+    body: JSON.stringify({
+      r,
+      g,
+      b
+    })
+  })
+  console.log(res)
 }
 
 // Simple example, see optional options for more configuration.
