@@ -1,0 +1,22 @@
+#main {
+    height: 100vh;
+    padding: 0;
+}
+@media (min-width: 768px) {
+#main {
+    height: 100vh;
+}
+}
+
+body {
+    background: rgb(42, 42, 42);
+}
+#main h1 {
+    color: #E9E9E9;
+}
+
+#picker {
+    max-width: 90vh;
+    display: block;
+    margin: auto;
+}
